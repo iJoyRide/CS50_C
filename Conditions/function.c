@@ -8,7 +8,6 @@ int get_int(void){
     return x;
 }
 
-
 int get_size(void){
 
     int n;
@@ -42,3 +41,4 @@ int main (void){
 
 }
 
+// gcc function.c -o function
