@@ -20,9 +20,9 @@ int main(void){
 
     long y = get_long();
 
-    printf("%i \n", x + y);
-    printf("%i \n", x - y);
-    printf("%i \n", x * y);
-    printf("%f \n", x / y);
+    printf("%li \n", x + y);
+    printf("%li \n", x - y);
+    printf("%li \n", x * y);
+    printf("%.20f \n", (float)x / (float)y);
 
 }
