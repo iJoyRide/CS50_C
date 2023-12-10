@@ -2,39 +2,46 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
+int main(void)
+{
     int x, y;
     char opt;
 
     // Seed the random number generator
     srand(time(NULL));
 
-    do {
+    do
+    {
         y = 1 + rand() % 10; // Random number between 1 and 10
 
         printf("Guess a number from 1 to 10: ");
         scanf("%d", &x);
 
-        if (x < y) {
+        if (x < y)
+        {
             printf("The number is %d\n", y);
             printf("Your number is smaller.\n");
         }
-        else if (x > y) {
+        else if (x > y)
+        {
             printf("The number is %d\n", y);
             printf("Your number is larger.\n");
         }
-        else {
+        else
+        {
             printf("The number is %d\n", y);
             printf("Your number is correct!\n");
         }
 
         // Ask the user if they want to continue playing
-        do {
+        do
+        {
             printf("Do you want to continue playing? (y/n): ");
-            scanf(" %c", &opt); 
-            
+            scanf(" %c", &opt);
+
             // Check for valid input
-            if (opt != 'y' && opt != 'Y' && opt != 'n' && opt != 'N') {
+            if (opt != 'y' && opt != 'Y' && opt != 'n' && opt != 'N')
+            {
                 printf("Invalid input. Please enter 'y' or 'n'.\n");
             }
         } while (opt != 'y' && opt != 'Y' && opt != 'n' && opt != 'N');
